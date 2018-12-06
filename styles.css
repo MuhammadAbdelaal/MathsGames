@@ -1,0 +1,257 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+    background: url("https://i.ibb.co/8zWycyq/maths.jpg");
+    font-family: cursive, sans-serif;
+}
+
+#trans-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.80);
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 700px;
+    height: 480px;
+    background-color:rgba(167, 243, 248, 0.589);
+}
+
+#choose-game {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 80px;
+    padding-left: 20px;
+    color: white;
+}
+
+.game{
+text-align: center;
+font-size: 18px;
+height: 90px;
+width: 80px;
+line-height: 155px;
+margin: 0 auto;
+box-shadow: 0px 2px rgba(27, 121, 18, 0.37);
+-webkit-box-shadow: 0px 2px rgba(27, 121, 18, 0.37);
+-moz-box-shadow: 0px 2px rgba(27, 121, 18, 0.37);
+}
+
+#addition {
+    background: #1a9c25 url("https://i.ibb.co/WkZM2Mb/add.png") center top no-repeat;
+}
+
+#subtraction {
+    background: #1a9c25 url("https://i.ibb.co/9h4SnL7/subtract.png") center top no-repeat;
+}
+
+#multiply {
+    background: #1a9c25 url("https://i.ibb.co/nw50xvY/multiply.png") center top no-repeat;
+}
+
+#addition:active,
+#subtraction:active,
+#multiply:active{
+    background-color: white;
+    color: #1a9c25;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    top: 4px;
+}
+
+.selected-game {
+    border: 4px rgb(255,165,0) inset;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+#game-played {
+    width: 580px;
+    padding: 10px;
+    position: relative;
+}
+
+#score {
+    background-color: #f1ff92;
+    color: #5f5a5a;
+    font-size: 19px;
+    padding: 5px;
+    position: absolute;
+    right: 15px;
+    box-shadow: 0px 3px rgb(33, 61, 214, 0.3);
+    -moz-box-shadow: 0px 3px rgb(33, 61, 214, 0.3);
+    -webkit-box-shadow: 0px 3px rgb(33, 61, 214, 0.3);
+}
+
+#score-value {
+    color: green;
+    font-weight: bold;
+}
+
+#correct {
+    background-color: #4ac456;
+    color: white;
+    position: absolute;
+    left: 220px;
+    padding: 5px;
+    box-shadow: 0px 3px rgba(66, 226, 82, 0.3);
+    -moz-box-shadow: 0px 3px rgba(66, 226, 82, 0.3);
+    -webkit-box-shadow: 0px 3px rgba(66, 226, 82, 0.3);
+    display: none;
+}
+
+#try-again {
+    background-color: #de401a;
+    color: white;
+    position: absolute;
+    left: 220px;
+    padding: 5px;
+    box-shadow: 0px 3px rgba(222, 64, 26, 0.3);
+    -webkit-box-shadow: 0px 3px rgba(222, 64, 26, 0.3);
+    -moz-box-shadow: 0px 3px rgba(222, 64, 26, 0.3);
+    display: none;
+}
+
+#question {
+    width: 450px;
+    height: 150px;
+    background-color: #63c073;
+    margin: 55px 0 10px 20px;
+    box-shadow: 0px 4px rgba(198, 221, 219, 0.705);
+    -webkit-box-shadow: 0px 4px rgba(198, 221, 219, 0.705);
+    -moz-box-shadow: 0px 4px rgba(198, 221, 219, 0.705);
+    font-size: 100px;
+    text-align: center;
+    font-family: cursive, sans-serif;
+    color: white;
+}
+
+#instruction {
+    width: 450px;
+    height: 50px;
+    background-color: rgb(255,165,0);
+    margin: 20px 0 10px 20px;
+    box-shadow: 0px 4px rgb(255,165,0, 0.3);
+    -webkit-box-shadow: 0px 4px rgb(255,165,0, 0.3);
+    -moz-box-shadow: 0px 4px rgb(255,165,0, 0.3);
+    color: white;
+    text-align: center;
+    line-height: 43px;
+    font-size: 25px;
+}
+
+#choices {
+    height: 100px;
+    width: 450px;
+    margin: 20px 0 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box {
+    width: 95px;
+    height: 95px;
+    background-color: white;
+    color: #63c073;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px rgb(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 4px rgb(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 4px rgb(0, 0, 0, 0.2);
+    text-align: center;
+    line-height: 90px;
+    font-size: 40px;
+    position: relative;
+    transition: all 0.2s;
+    -wibkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+}
+
+.box:hover, #start-reset:hover {
+    background-color: rgb(255,165,0);
+    color: white;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    top: 4px;
+}
+
+.box:active, #start-reset:active{
+    background-color: rgb(255,165,0);
+    color: white;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    top: 4px;
+}
+
+#start-reset {
+    width: 88px;
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 10px;
+    left: 190px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 1px rgb(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 4px rgb(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 4px rgb(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    transition: all 0.2s;
+    -wibkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    /* display: none; */
+}
+
+#timer-box {
+    width: 175px;
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    bottom: 23px;
+    background-color: #f1ff92;
+    color: #5f5a5a;
+    box-shadow: 0px 1px rgb(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 4px rgb(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 4px rgb(0, 0, 0, 0.2);
+    border-radius: 5px;
+/*    visibility: hidden; can be used also but it makes the elemet not visible but keeps its own place in the page*/
+    display: none;
+}
+
+#timer-box-value {
+    color: red;
+    font-weight: bold;
+}
+
+#game-over {
+    height: 220px;
+    width: 400px;
+    background: linear-gradient(#f3ca6b, #f3706c);
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    top: 80px;
+    left: 135px;
+    z-index: 1;
+    display: none;
+}
+
+#game-over-score {
+    color: green;
+    font-size: 1.2em;
+}
+
